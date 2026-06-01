@@ -9,6 +9,10 @@ export async function POST(request: Request) {
       data: { user },
     } = await supabase.auth.getUser()
 
+    if (!user) {
+      return NextResponse.json({ error: "Unauthorized: You must be logged in to submit an inquiry" }, { status: 401 })
+    }
+
     const { property_id, name, email, phone, message, inquiry_type } = await request.json()
 
     if (!property_id || !name || !email || !message) {

@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS public.profiles (
   last_name TEXT,
   email TEXT,
   phone TEXT,
-  user_type TEXT CHECK (user_type IN ('buyer', 'seller', 'both')),
+  user_type TEXT CHECK (user_type IN ('buyer', 'seller', 'both', 'investor')),
   bio TEXT,
   avatar_url TEXT,
   created_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE('utc'::text, NOW()),
@@ -80,9 +80,6 @@ ALTER TABLE public.inquiries ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.favorites ENABLE ROW LEVEL SECURITY;
 
 -- Profiles RLS Policies
-CREATE POLICY "profiles_select_own"
-  ON public.profiles FOR SELECT
-  USING (auth.uid() = id);
 
 CREATE POLICY "profiles_select_public"
   ON public.profiles FOR SELECT
