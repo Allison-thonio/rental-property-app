@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ProperteeHub - Elite Agent Profile</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D4AF37",
+                        "primary-light": "#F4D06F",
+                        "primary-dark": "#AA8C2C",
+                        "background-dark": "#050505",
+                        "surface-dark": "#121212",
+                        "surface-card": "#1A1A1A",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    backgroundImage: {
+                        'gold-gradient': 'linear-gradient(135deg, #D4AF37 0%, #F4D06F 50%, #D4AF37 100%)',
+                        'dark-gradient': 'linear-gradient(to bottom, #050505 0%, #121212 100%)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #F4D06F 0%, #D4AF37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border {
+            position: relative;
+        }
+        .gold-border::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.5), rgba(212, 175, 55, 0.1));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(844px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark font-display text-white overflow-y-auto overflow-x-hidden min-h-screen w-full flex flex-col relative no-scrollbar">
+<div class="h-14 w-full flex items-center justify-between px-6 bg-background-dark/80 backdrop-blur-md sticky top-0 z-50 border-b border-white/5">
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-card border border-white/10 text-white hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+</button>
+<div class="flex items-center gap-1.5 px-3 py-1 bg-surface-dark border border-primary/30 rounded-full shadow-[0_0_15px_rgba(212,175,55,0.15)]">
+<span class="material-symbols-outlined text-primary text-[14px]">verified</span>
+<span class="text-[10px] tracking-[0.15em] font-bold text-primary uppercase">Verified Agent</span>
+</div>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-card border border-white/10 text-white hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+<div class="px-6 pt-6 pb-32 flex flex-col items-center">
+<div class="relative mb-6 group">
+<div class="absolute inset-0 bg-primary/20 blur-[60px] rounded-full pointer-events-none"></div>
+<div class="w-32 h-32 rounded-full p-1 bg-gradient-to-br from-primary via-primary-light to-primary-dark relative z-10">
+<div class="w-full h-full rounded-full overflow-hidden border-4 border-background-dark">
+<img alt="Agent Headshot" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP1oWu95ZT3mF_8xlPbHynya8eGYfmugGO9pB_UOUMLKW_N6co1E1HI78fcEPAwHhV6WrPguAcoos6tgduHvL9ToWlMEJfjNIwZE07kvfkr3dnmAhbno02xMrpvgeZ0TYv0PmyTiQpRQrJbRrV50IViuvf09DRSzOt0SvuKnjLlI-sOMhObYgZogDEPmeCSP6N-WjgFlXryb20oglni2Hq525cDI9G37gr3u6rMzUhG7pdAxAS0_5t5AS6nx6nIlnDy5tWZPs-OIM"/>
+</div>
+</div>
+<div class="absolute -bottom-3 left-1/2 -translate-x-1/2 z-20 bg-black text-primary px-3 py-1 rounded-full border border-primary/50 flex items-center gap-1 shadow-lg shadow-black/50">
+<span class="material-symbols-outlined text-[14px] fill-1">verified</span>
+<span class="text-[9px] font-bold tracking-widest uppercase">Elite Status</span>
+</div>
+</div>
+<div class="text-center mb-8 w-full">
+<h1 class="text-2xl font-bold tracking-tight text-white uppercase mb-1">Alexander Vance</h1>
+<p class="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4">Senior Partner • Luxury Estates</p>
+<div class="flex justify-center gap-3">
+<button class="w-10 h-10 rounded-full bg-surface-card border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-[18px] text-gray-400">call</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface-card border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-[18px] text-gray-400">mail</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface-card border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-[18px] text-gray-400">share</span>
+</button>
+</div>
+</div>
+<div class="w-full grid grid-cols-2 gap-3 mb-10">
+<div class="bg-surface-card p-4 rounded-xl border border-white/5 flex flex-col items-center justify-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<p class="text-[10px] text-gray-500 uppercase tracking-widest mb-1">Transactions</p>
+<p class="text-2xl font-bold text-white">142</p>
+<p class="text-[9px] text-primary mt-1 flex items-center gap-0.5"><span class="material-symbols-outlined text-[10px]">arrow_upward</span> Top 1%</p>
+</div>
+<div class="bg-surface-card p-4 rounded-xl border border-white/5 flex flex-col items-center justify-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<p class="text-[10px] text-gray-500 uppercase tracking-widest mb-1">Volume Sold</p>
+<p class="text-2xl font-bold text-white">$485M</p>
+<p class="text-[9px] text-gray-400 mt-1">Lifetime</p>
+</div>
+<div class="bg-surface-card p-4 rounded-xl border border-white/5 flex flex-col items-center justify-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<p class="text-[10px] text-gray-500 uppercase tracking-widest mb-1">Avg Listing</p>
+<p class="text-2xl font-bold text-white">$3.2M</p>
+<p class="text-[9px] text-gray-400 mt-1">Last 12mo</p>
+</div>
+<div class="bg-surface-card p-4 rounded-xl border border-white/5 flex flex-col items-center justify-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<p class="text-[10px] text-gray-500 uppercase tracking-widest mb-1">Experience</p>
+<p class="text-2xl font-bold text-white">15<span class="text-sm align-top text-gray-400 font-medium ml-0.5">Yrs</span></p>
+<p class="text-[9px] text-gray-400 mt-1">Licensed</p>
+</div>
+</div>
+<div class="w-full mb-4">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xs font-bold text-white uppercase tracking-[0.15em]">Active Listings</h3>
+<button class="text-[10px] font-bold text-primary uppercase tracking-wider flex items-center hover:text-white transition-colors">View All <span class="material-symbols-outlined text-[12px] ml-1">arrow_forward</span></button>
+</div>
+<div class="flex overflow-x-auto gap-4 pb-4 -mx-6 px-6 no-scrollbar snap-x snap-mandatory">
+<div class="min-w-[280px] snap-center bg-surface-card rounded-xl overflow-hidden shadow-lg border border-white/5 relative group">
+<div class="h-40 w-full relative">
+<img alt="Luxury Penthouse" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4pcTUJmbHvW_UbHv09jvOoP58sMxdur_F_SYgqbTwdqAVXtVNaDmm_szYequwnUM8sHE8qfjtFpHF7ddHwHAB3iZiU6_HvR08WFfNNwDe7RHvpp5b_eC2dKOR6vdTH5rdj_XSv7MyuI4_JR1qXUeDjRXJS5kJ8QtF4xfenWo-TR1mAmfzHche2vdSi8sSLW30Wbp7ITNRlCs9cj4l5cXSfnf0XkdL3w3eJVFhPc4F53aHWucjPWdtCMCMxAt4zNcvlWXDotl17f8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-card via-transparent to-transparent"></div>
+<div class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider border border-white/10">
+                        $12,500,000
+                    </div>
+</div>
+<div class="p-4">
+<h4 class="text-base font-bold text-white mb-1 uppercase tracking-wide truncate">The Obsidian Penthouse</h4>
+<p class="text-gray-400 text-[10px] uppercase tracking-wider mb-3">Tribeca, New York</p>
+<div class="flex items-center gap-4 border-t border-white/5 pt-3">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">bed</span>
+<span class="text-[10px] text-gray-300 font-bold">4 Bed</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">shower</span>
+<span class="text-[10px] text-gray-300 font-bold">5.5 Bath</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">square_foot</span>
+<span class="text-[10px] text-gray-300 font-bold">4,200 Sq Ft</span>
+</div>
+</div>
+</div>
+</div>
+<div class="min-w-[280px] snap-center bg-surface-card rounded-xl overflow-hidden shadow-lg border border-white/5 relative group">
+<div class="h-40 w-full relative">
+<img alt="Modern Villa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXIFaMXM_6i4ElU47XQpGaz8yqHH7wBpNvYH18-ip6Iigaq2qbHvYlgjOChqzje9akQBUUIrvWLNmLPiuHWVzO1BMwUZ0I0QXxUbWli5kybPfheYoQWX4GxM3rcVyK8V7oJVNdfTMhPgxgXIQk-4KntkJgPqj4Ei5Num4-s7MhhSofoybjiAaoSG84RaBcrZFMPLIKJAY5dhKmz5Dz8RICkCF9uJXoVcQ9ow8YlPWtQmygtrV0ribIDtIjW-bf4kbjMZzrjXGvCwo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-card via-transparent to-transparent"></div>
+<div class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider border border-white/10">
+                        $8,950,000
+                    </div>
+</div>
+<div class="p-4">
+<h4 class="text-base font-bold text-white mb-1 uppercase tracking-wide truncate">Beverly Hills Modern</h4>
+<p class="text-gray-400 text-[10px] uppercase tracking-wider mb-3">Los Angeles, CA</p>
+<div class="flex items-center gap-4 border-t border-white/5 pt-3">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">bed</span>
+<span class="text-[10px] text-gray-300 font-bold">5 Bed</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">shower</span>
+<span class="text-[10px] text-gray-300 font-bold">6 Bath</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">square_foot</span>
+<span class="text-[10px] text-gray-300 font-bold">5,800 Sq Ft</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full bg-surface-card/50 border border-white/5 rounded-xl p-4 relative mb-4">
+<span class="material-symbols-outlined absolute top-3 left-3 text-primary/20 text-4xl">format_quote</span>
+<p class="text-xs text-gray-300 italic relative z-10 pl-2 pt-2 mb-2 leading-relaxed">
+            "Alexander provided unparalleled access to off-market properties. His discretion and negotiation skills secured our dream estate under asking."
+        </p>
+<div class="flex items-center justify-end gap-2">
+<div class="w-5 h-5 bg-gray-600 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4ujQRJBsYCf4jfGY5gOFNFQwpKT3o0APcTFMqZE5tIif2W-37q2e359e4QW8JLy57lvMeuV3vY7d9le_WUsFrTFVu6gXIbhkEdCulMeZPmWC1_Kr88-W3gbKGfG41vXbWzyKen48mR5TKkj_zgaSWuI5vO95iQkEptQjWbsrKM3a33EbP179Gb4qHX0eibXGe6MlMHd6cZ2j9Vm0P6EJbhJaITauk_TScH-iOxaGCZbBMalp3lFp2FKtpMLSshDwcg44SzI0hLr0"/>
+</div>
+<p class="text-[10px] text-primary font-bold uppercase tracking-wider">James Sterling, CEO</p>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 bg-background-dark/95 backdrop-blur-xl border-t border-white/5 p-6 z-50">
+<button class="w-full bg-gold-gradient text-background-dark font-extrabold text-sm uppercase tracking-widest py-4 rounded-none shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:shadow-[0_0_35px_rgba(212,175,55,0.6)] hover:scale-[1.01] transition-all active:scale-[0.99] flex justify-center items-center gap-3">
+        Contact Agent <span class="material-symbols-outlined text-[20px] font-bold">arrow_forward_ios</span>
+</button>
+</div>
+
+</body></html>

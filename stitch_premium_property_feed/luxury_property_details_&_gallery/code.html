@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luxury Property Details - ProperteeHub</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#171612", // Matching the deep dark tone from the request context
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white overflow-x-hidden antialiased">
+<!-- Main Container -->
+<div class="relative flex flex-col min-h-screen w-full max-w-md mx-auto bg-white dark:bg-background-dark shadow-2xl overflow-hidden">
+<!-- Image Carousel Section -->
+<div class="relative w-full h-[55vh]">
+<!-- Main Image -->
+<div class="w-full h-full bg-cover bg-center" data-alt="Modern luxury living room interior with high ceilings" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCO8KZrCwgS99HZqKTCKZI235bv7kidxlS6AtTrvHwZwOp6UqRlwmB6a8MRdDOg8MnKNyfsYYd0tBZTwR48lL4EXOksGXFzagaCOXsI5OeJBt2L06DeKn_dGOfhbHCyUuuibI_7o09T5DJibyspSH0QG304I5dCHPspT8Of1RknBrhyCSSEAV2tlQzUGKoVLE8dSMbYdkXrl0BuG6lR7qUgQVBqzrJGqv9cWzilor2eLSwdbIPwAZh1KUEZ_ZPc6e7McJjpkgbeo6A');">
+<!-- Gradient Overlay for text readability at top -->
+<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-transparent opacity-80 h-32"></div>
+</div>
+<!-- Navigation Header Overlay -->
+<div class="absolute top-0 left-0 right-0 p-4 pt-12 flex items-center justify-between z-10">
+<button class="flex items-center justify-center size-10 rounded-full bg-black/20 backdrop-blur-md text-white hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<div class="flex items-center justify-center gap-4">
+<button class="flex items-center justify-center size-10 rounded-full bg-black/20 backdrop-blur-md text-white hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-2xl">favorite_border</span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full bg-black/20 backdrop-blur-md text-white hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-2xl">ios_share</span>
+</button>
+</div>
+</div>
+<!-- Pagination Indicator -->
+<div class="absolute bottom-6 right-6 z-10">
+<div class="px-3 py-1.5 bg-black/40 backdrop-blur-lg border border-primary/30 rounded-full">
+<p class="text-primary text-xs font-bold tracking-wider">1 / 12</p>
+</div>
+</div>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto pb-24 relative -mt-6 bg-background-light dark:bg-background-dark rounded-t-[2rem] z-20 shadow-[0_-10px_40px_rgba(0,0,0,0.5)] border-t border-white/5">
+<!-- Drag Indicator -->
+<div class="w-full flex justify-center pt-3 pb-1">
+<div class="w-12 h-1 bg-gray-300 dark:bg-gray-700 rounded-full opacity-50"></div>
+</div>
+<!-- Property Header -->
+<div class="px-6 pt-4 pb-6">
+<div class="flex flex-col gap-1">
+<h1 class="text-3xl font-extrabold text-primary tracking-wide leading-tight uppercase">The Royal Dublin Suite</h1>
+<div class="flex items-end justify-between mt-2">
+<h2 class="text-2xl font-bold text-white tracking-wide">$12,500,000</h2>
+<div class="flex items-center text-gray-500 dark:text-gray-400 text-sm font-medium mb-1">
+<span class="material-symbols-outlined text-lg mr-1 text-primary">location_on</span>
+                            Manhattan, New York
+                        </div>
+</div>
+</div>
+</div>
+<!-- Divider -->
+<div class="w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent mb-6"></div>
+<!-- Feature Chips -->
+<div class="px-6 pb-8">
+<div class="flex items-center justify-between gap-3 overflow-x-auto no-scrollbar">
+<div class="flex-1 min-w-[100px] flex flex-col items-center justify-center p-3 border border-primary/30 rounded-lg bg-primary/5">
+<span class="material-symbols-outlined text-primary mb-1">square_foot</span>
+<span class="text-white font-bold text-sm">4,500</span>
+<span class="text-primary/60 text-[10px] uppercase tracking-wider font-semibold">Sq Ft</span>
+</div>
+<div class="flex-1 min-w-[100px] flex flex-col items-center justify-center p-3 border border-primary/30 rounded-lg bg-primary/5">
+<span class="material-symbols-outlined text-primary mb-1">bed</span>
+<span class="text-white font-bold text-sm">5</span>
+<span class="text-primary/60 text-[10px] uppercase tracking-wider font-semibold">Beds</span>
+</div>
+<div class="flex-1 min-w-[100px] flex flex-col items-center justify-center p-3 border border-primary/30 rounded-lg bg-primary/5">
+<span class="material-symbols-outlined text-primary mb-1">bathtub</span>
+<span class="text-white font-bold text-sm">5.5</span>
+<span class="text-primary/60 text-[10px] uppercase tracking-wider font-semibold">Baths</span>
+</div>
+</div>
+</div>
+<!-- Description Section -->
+<div class="px-6 pb-6">
+<h3 class="text-lg font-bold text-primary mb-3 uppercase tracking-wider">The Residence</h3>
+<p class="text-gray-300 text-base leading-relaxed font-normal">
+                    Experience the pinnacle of urban luxury in this expansive penthouse suite. Featuring floor-to-ceiling windows with panoramic views of Central Park, this residence offers a seamless blend of modern design and timeless elegance. 
+                    <br/><br/>
+                    Every detail has been curated to perfection, from the hand-laid herringbone oak floors to the custom Italian marble kitchen. The master suite serves as a private sanctuary, complete with a spa-inspired bathroom and dual dressing rooms.
+                </p>
+<button class="mt-4 text-primary text-sm font-bold flex items-center gap-1 hover:text-white transition-colors">
+                    READ MORE <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- Amenities Preview (Optional Extra) -->
+<div class="px-6 pb-12">
+<h3 class="text-lg font-bold text-primary mb-4 uppercase tracking-wider">Amenities</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary/70">pool</span>
+<span class="text-gray-300 text-sm">Infinity Pool</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary/70">fitness_center</span>
+<span class="text-gray-300 text-sm">Private Gym</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary/70">concierge</span>
+<span class="text-gray-300 text-sm">24/7 Concierge</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary/70">local_parking</span>
+<span class="text-gray-300 text-sm">Valet Parking</span>
+</div>
+</div>
+</div>
+<!-- Location Map -->
+<div class="px-6 pb-8">
+<h3 class="text-lg font-bold text-primary mb-4 uppercase tracking-wider">Location</h3>
+<div class="w-full h-48 rounded-xl overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center grayscale opacity-80" data-alt="Map view of New York City" data-location="New York City map view" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBKYoSs8m74XaHCTFGaHaMADmCqYivRrXdZ6KdUPIwzEkPxKel2gleXop-8GEZ6K9GMZTUo_J96nmmTpCdOhjo7sdB84DlaHwsFzyrPonlmcdQg-nAnxdgLAz4Zzp6oeszhLEpjnLh7j4VouZ4aY4kYELo28GDiVIuoWD6YxyxCpuHUDsI3aHerLpF7dj73BP1uHP5d-34VlBaGZ0iuk7Zcu7zXROd44-SNrLN5_E14q-oqD2Sp1cLVYEwdx9m5yaVhb9X11j7cLsw');"></div>
+<div class="absolute inset-0 bg-primary/10 flex items-center justify-center">
+<div class="bg-background-dark p-2 rounded-full border border-primary shadow-lg">
+<span class="material-symbols-outlined text-primary">location_on</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Fixed Action Bar -->
+<div class="absolute bottom-0 w-full bg-background-dark/95 backdrop-blur-md border-t border-white/5 px-6 py-4 pb-8 z-50">
+<div class="flex items-center justify-between gap-4">
+<div class="flex flex-col">
+<span class="text-primary/70 text-xs font-semibold uppercase tracking-wider">Listing Agent</span>
+<span class="text-white text-sm font-bold">ProperteeHub Exclusive</span>
+</div>
+<button class="flex-1 bg-primary hover:bg-[#c29f2e] text-black text-base font-bold py-4 px-6 rounded-lg uppercase tracking-wide transition-colors shadow-[0_0_20px_rgba(212,175,53,0.3)]">
+                    Inquire Now
+                </button>
+</div>
+</div>
+</div>
+</body></html>

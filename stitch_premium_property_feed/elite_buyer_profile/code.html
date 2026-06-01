@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Elite Buyer Profile - ProperteeHub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#000000",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #d4af35 0%, #f1d592 50%, #d4af35 100%);
+        }
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #d4af35 0%, #f1d592 50%, #d4af35 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-white font-display">
+<!-- iOS Status Bar Spacer -->
+<div class="h-12 w-full"></div>
+<main class="max-w-md mx-auto px-6 pb-24">
+<!-- Header Section -->
+<header class="flex flex-col items-center pt-4 pb-8">
+<div class="relative mb-4">
+<div class="w-32 h-32 rounded-full p-1 gold-gradient">
+<div class="w-full h-full rounded-full overflow-hidden border-4 border-black">
+<img alt="User Avatar" class="w-full h-full object-cover" data-alt="Professional portrait of a high-end male client" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7D18pkNiwbbd5ZDlyNyZlvDHDw6GpHDzT2oUHDWiOKLz_S6SS9akizmM-3g6mOQ8vmXa-InHazYWJL79Swn85w3udRDCTGke16U1IEEl4RrhF_z7hQk62kOihI0R7QXGSw-mFJt8KzuShfnvjp_-rmJy5ZiISK6L-bBphkkHONwL00jRy4uRVJfjH8nQS56bFsCVh79M87gb4qEvJ9VxIu18MOU3A4VR9b0gCO4b9xUSSPD5AI5Y0QOkaE60eswh-dsrnc9btuW8"/>
+</div>
+</div>
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-black text-[10px] font-bold px-3 py-1 rounded-full tracking-widest whitespace-nowrap border-2 border-black">
+                    PREMIUM MEMBER
+                </div>
+</div>
+<h1 class="text-2xl font-bold tracking-[0.2em] uppercase text-white mt-4">Alexander Vaughn</h1>
+<p class="text-primary/70 text-sm tracking-widest uppercase mt-1">Elite Portfolio</p>
+<button class="mt-6 flex items-center justify-center gap-2 border border-primary/40 px-6 py-2 rounded-lg text-primary text-xs font-bold tracking-widest uppercase hover:bg-primary/10 transition-colors">
+                Edit Profile
+            </button>
+</header>
+<!-- Metric Cards -->
+<section class="grid grid-cols-3 gap-3 mb-10">
+<div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col items-center justify-center text-center">
+<span class="material-icons text-primary text-xl mb-2">favorite_border</span>
+<span class="text-xl font-bold text-white leading-none">12</span>
+<span class="text-[9px] text-white/40 uppercase tracking-tighter mt-1">Favorites</span>
+</div>
+<div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col items-center justify-center text-center">
+<span class="material-icons text-primary text-xl mb-2">search</span>
+<span class="text-xl font-bold text-white leading-none">04</span>
+<span class="text-[9px] text-white/40 uppercase tracking-tighter mt-1">Saved</span>
+</div>
+<div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col items-center justify-center text-center">
+<span class="material-icons text-primary text-xl mb-2">calendar_today</span>
+<span class="text-xl font-bold text-white leading-none">02</span>
+<span class="text-[9px] text-white/40 uppercase tracking-tighter mt-1">Tours</span>
+</div>
+</section>
+<!-- Curated Section -->
+<section class="mb-8">
+<div class="flex justify-between items-end mb-6">
+<h2 class="text-sm font-bold tracking-[0.2em] uppercase text-white/60">Curated For You</h2>
+<a class="text-[10px] text-primary font-bold tracking-widest uppercase" href="#">View All</a>
+</div>
+<!-- Property List -->
+<div class="space-y-6">
+<!-- Listing 1 -->
+<div class="group relative bg-white/5 rounded-xl overflow-hidden border border-white/10">
+<div class="aspect-[16/9] overflow-hidden">
+<img alt="Luxury Villa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Modern luxury mansion with pool at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJhO1wyPASbgLEaW9n_VW0d_FUhyISYB028G5Gt2ZPERL1VXvVP9KZ6yRazyhFds2kiVjUqXBZuplRshIOXR2RNco3Ko-znJhVGlNXQOYBX_1bUOQ7yHLzEOoEp2bfoX-g9s-FInEd4xceyMJDhL6cbHRI2H9sCVoQ3EYZD6Zbu9Z6eCzG7oW_zdi0TI0xB_TBl-2Rih_O4BQ1c7ZxIAFJaPyO4T-wCX6bRvb3YzOhXqDisBCH0mcMW1K63V_NTd_j1QE5GQ2LcVM"/>
+<div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-lg border border-primary/30">
+<span class="text-primary font-bold text-sm">$8,450,000</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-white font-bold tracking-wider uppercase text-sm">The Obsidian Estate</h3>
+<div class="flex items-center text-white/40 text-[11px] mt-1 tracking-wide">
+<span class="material-icons text-[14px] mr-1">location_on</span>
+                            BEVERLY HILLS, CA
+                        </div>
+<div class="flex gap-4 mt-4 pt-4 border-t border-white/10">
+<div class="flex items-center gap-1.5">
+<span class="material-icons text-xs text-primary/60">bed</span>
+<span class="text-[10px] text-white/60 uppercase">6 Beds</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-icons text-xs text-primary/60">bathtub</span>
+<span class="text-[10px] text-white/60 uppercase">8 Baths</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-icons text-xs text-primary/60">square_foot</span>
+<span class="text-[10px] text-white/60 uppercase">12k SQFT</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Listing 2 -->
+<div class="group relative bg-white/5 rounded-xl overflow-hidden border border-white/10">
+<div class="aspect-[16/9] overflow-hidden">
+<img alt="Luxury Condo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Minimalist luxury penthouse interior with city view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJTLEKAxFU1FISsIjUUe0lMABelFGqaLncZeX19A6rnpk9AkMU4M6DwgEoA_12xlpjqm3rtwD5RYOnao3F6JUD6EiCrRpzxYWcWZomRskIad78b10pAGiTMPlySdAQkMRFHfkj5vpHDgH4DzifC3K1Q8ZtVeeLzXvpGaqjSD1cDgCh7ivwLkrPZQ9ZyXLfQVB0g9CKlcEK51q1btzuUKzaR_nJB4PXiwOFXSxpvgAtw5LpkErh7qy5EJRZdYVKKPM67LkoHYZvU8I"/>
+<div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-lg border border-primary/30">
+<span class="text-primary font-bold text-sm">$3,120,000</span>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-white font-bold tracking-wider uppercase text-sm">Azure Heights Penthouse</h3>
+<div class="flex items-center text-white/40 text-[11px] mt-1 tracking-wide">
+<span class="material-icons text-[14px] mr-1">location_on</span>
+                            TRIBECA, NY
+                        </div>
+<div class="flex gap-4 mt-4 pt-4 border-t border-white/10">
+<div class="flex items-center gap-1.5">
+<span class="material-icons text-xs text-primary/60">bed</span>
+<span class="text-[10px] text-white/60 uppercase">3 Beds</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-icons text-xs text-primary/60">bathtub</span>
+<span class="text-[10px] text-white/60 uppercase">4 Baths</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-icons text-xs text-primary/60">square_foot</span>
+<span class="text-[10px] text-white/60 uppercase">4.5k SQFT</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 right-0 bg-black/80 backdrop-blur-xl border-t border-white/10 px-8 py-4 flex justify-between items-center z-50">
+<button class="text-white/40 hover:text-primary transition-colors flex flex-col items-center gap-1">
+<span class="material-icons text-2xl">home</span>
+<span class="text-[8px] uppercase tracking-widest font-bold">Discover</span>
+</button>
+<button class="text-white/40 hover:text-primary transition-colors flex flex-col items-center gap-1">
+<span class="material-icons text-2xl">explore</span>
+<span class="text-[8px] uppercase tracking-widest font-bold">Explore</span>
+</button>
+<button class="text-primary flex flex-col items-center gap-1">
+<div class="w-1.5 h-1.5 bg-primary rounded-full absolute -top-1"></div>
+<span class="material-icons text-2xl">person</span>
+<span class="text-[8px] uppercase tracking-widest font-bold">Profile</span>
+</button>
+<button class="text-white/40 hover:text-primary transition-colors flex flex-col items-center gap-1">
+<span class="material-icons text-2xl">settings</span>
+<span class="text-[8px] uppercase tracking-widest font-bold">Settings</span>
+</button>
+</nav>
+</body></html>

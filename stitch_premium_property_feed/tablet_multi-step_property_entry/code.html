@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ProperteeHub - New Property Entry</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#edae1d",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221c10",
+                        "sidebar-bg": "#121212",
+                        "form-bg": "#1e1e1e",
+                        "input-bg": "#252525",
+                        "input-border": "#544c3b"
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        
+        .gold-glow:focus-within {
+            box-shadow: 0 0 10px rgba(237, 174, 29, 0.15);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display h-screen w-full overflow-hidden text-white selection:bg-primary/30">
+<!-- Main Container: Split Layout -->
+<div class="flex h-full w-full flex-row">
+<!-- Left Sidebar: Progress Navigation -->
+<aside class="hidden md:flex flex-col w-80 lg:w-96 bg-sidebar-bg border-r border-white/5 h-full relative z-10 shrink-0">
+<!-- Header Logo Area -->
+<div class="p-8 pb-12">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-4xl">real_estate_agent</span>
+<h1 class="text-xl font-bold tracking-widest uppercase text-white">ProperteeHub</h1>
+</div>
+<div class="mt-8">
+<button class="flex items-center text-gray-400 hover:text-white transition-colors text-sm font-medium uppercase tracking-wide gap-2">
+<span class="material-symbols-outlined text-lg">arrow_back</span>
+                        Back to Dashboard
+                    </button>
+</div>
+</div>
+<!-- Stepper -->
+<div class="px-8 flex-1">
+<div class="relative flex flex-col gap-10">
+<!-- Vertical Line -->
+<div class="absolute left-[19px] top-4 bottom-4 w-0.5 bg-white/10 -z-10"></div>
+<!-- Step 1: Active -->
+<div class="flex items-start gap-4">
+<div class="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-black font-bold shadow-[0_0_15px_rgba(237,174,29,0.4)]">
+                            1
+                        </div>
+<div class="flex flex-col pt-2">
+<span class="text-sm font-bold uppercase tracking-wider text-primary">Basic Info</span>
+<span class="text-xs text-gray-400 mt-1">Name, Price, Size</span>
+</div>
+</div>
+<!-- Step 2: Inactive -->
+<div class="flex items-start gap-4 group cursor-pointer">
+<div class="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-white/20 bg-sidebar-bg text-gray-500 font-medium group-hover:border-primary/50 group-hover:text-primary transition-colors">
+                            2
+                        </div>
+<div class="flex flex-col pt-2 opacity-50 group-hover:opacity-80 transition-opacity">
+<span class="text-sm font-bold uppercase tracking-wider text-white">Visuals</span>
+<span class="text-xs text-gray-400 mt-1">Photos, Video, 3D Tour</span>
+</div>
+</div>
+<!-- Step 3: Inactive -->
+<div class="flex items-start gap-4 group cursor-pointer">
+<div class="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-white/20 bg-sidebar-bg text-gray-500 font-medium group-hover:border-primary/50 group-hover:text-primary transition-colors">
+                            3
+                        </div>
+<div class="flex flex-col pt-2 opacity-50 group-hover:opacity-80 transition-opacity">
+<span class="text-sm font-bold uppercase tracking-wider text-white">Verification</span>
+<span class="text-xs text-gray-400 mt-1">Documents &amp; Deeds</span>
+</div>
+</div>
+<!-- Step 4: Inactive -->
+<div class="flex items-start gap-4 group cursor-pointer">
+<div class="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-white/20 bg-sidebar-bg text-gray-500 font-medium group-hover:border-primary/50 group-hover:text-primary transition-colors">
+                            4
+                        </div>
+<div class="flex flex-col pt-2 opacity-50 group-hover:opacity-80 transition-opacity">
+<span class="text-sm font-bold uppercase tracking-wider text-white">Review</span>
+<span class="text-xs text-gray-400 mt-1">Final Check</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Footer -->
+<div class="p-8 border-t border-white/5">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-gray-700 bg-center bg-cover" data-alt="Profile picture of the real estate agent" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDhOGlqZV35CpzsXfriDjfhE5B_7pwdr8ely7EWQqdfyX6QpdPQviBb7d8elDRlr75mzLEz2MukXtpyWkw50vrrFeR7ASR4dOVatzWWfBH-clm0NZLzUVAE2p5NkYUWMIZNeTvgyRam-uFRorFsVq0sHPOk--wtrNj93uUJTAi09Ci5PkOg9lU8G21XhxWx6hMw_y2KgXZYzld9kr6ZOPd1GCtjOzS_4Yc04VPCOUzJCeBb4LXArKTZWfQhBnmX8tyDOFWfFk28ZRA');"></div>
+<div>
+<p class="text-sm font-semibold text-white">Agent Smith</p>
+<p class="text-xs text-gray-500 uppercase tracking-wide">Senior Broker</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area: Form -->
+<main class="flex-1 flex flex-col h-full bg-form-bg relative overflow-hidden">
+<!-- Mobile Header (Visible only on small screens) -->
+<div class="md:hidden flex items-center justify-between p-4 bg-sidebar-bg border-b border-white/10">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined">real_estate_agent</span>
+<span class="font-bold uppercase tracking-widest">ProperteeHub</span>
+</div>
+<span class="text-xs font-bold bg-primary text-black px-2 py-1 rounded">STEP 1/4</span>
+</div>
+<!-- Scrollable Form Container -->
+<div class="flex-1 overflow-y-auto no-scrollbar p-6 md:p-12 lg:p-16 pb-32">
+<div class="max-w-4xl mx-auto">
+<!-- Section Header -->
+<div class="mb-10">
+<h2 class="text-primary text-3xl md:text-4xl font-bold tracking-tight uppercase mb-2">Property Essentials</h2>
+<p class="text-gray-400 text-lg">Enter the core details of the new listing.</p>
+</div>
+<!-- Form Grid -->
+<form class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
+<!-- Property Name (Full Width) -->
+<div class="md:col-span-2 group">
+<label class="block text-xs font-bold text-primary uppercase tracking-widest mb-3">Property Name</label>
+<div class="relative gold-glow rounded-lg transition-all duration-300">
+<input class="w-full bg-input-bg border border-input-border text-white text-lg rounded-lg px-5 py-4 focus:ring-1 focus:ring-primary focus:border-primary transition-colors placeholder-gray-600" placeholder="e.g. The Obsidian Villa" type="text"/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined">edit</span>
+</div>
+</div>
+</div>
+<!-- Listing Price -->
+<div class="group">
+<label class="block text-xs font-bold text-primary uppercase tracking-widest mb-3">Listing Price (USD)</label>
+<div class="relative gold-glow rounded-lg transition-all duration-300">
+<div class="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors font-medium text-lg">$</div>
+<input class="w-full bg-input-bg border border-input-border text-white text-lg rounded-lg pl-10 pr-5 py-4 focus:ring-1 focus:ring-primary focus:border-primary transition-colors placeholder-gray-600" placeholder="0.00" type="text"/>
+</div>
+</div>
+<!-- Square Footage -->
+<div class="group">
+<label class="block text-xs font-bold text-primary uppercase tracking-widest mb-3">Total Area</label>
+<div class="relative gold-glow rounded-lg transition-all duration-300">
+<input class="w-full bg-input-bg border border-input-border text-white text-lg rounded-lg px-5 py-4 focus:ring-1 focus:ring-primary focus:border-primary transition-colors placeholder-gray-600" placeholder="e.g. 5,200" type="text"/>
+<div class="absolute right-5 top-1/2 -translate-y-1/2 text-gray-500 text-sm font-bold bg-white/5 px-2 py-1 rounded">SQ FT</div>
+</div>
+</div>
+<!-- Property Type (Dropdown) -->
+<div class="group relative">
+<label class="block text-xs font-bold text-primary uppercase tracking-widest mb-3">Property Type</label>
+<div class="relative gold-glow rounded-lg transition-all duration-300">
+<select class="w-full bg-input-bg border border-input-border text-white text-lg rounded-lg px-5 py-4 focus:ring-1 focus:ring-primary focus:border-primary transition-colors appearance-none cursor-pointer">
+<option>Select Type...</option>
+<option>Penthouse</option>
+<option>Villa</option>
+<option>Estate</option>
+<option>Manor</option>
+</select>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 text-primary pointer-events-none">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Landmark -->
+<div class="group">
+<label class="block text-xs font-bold text-primary uppercase tracking-widest mb-3">Nearest Landmark</label>
+<div class="relative gold-glow rounded-lg transition-all duration-300">
+<input class="w-full bg-input-bg border border-input-border text-white text-lg rounded-lg px-5 py-4 focus:ring-1 focus:ring-primary focus:border-primary transition-colors placeholder-gray-600" placeholder="e.g. Central Park West" type="text"/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+</div>
+</div>
+<!-- Brief Description (Full Width) -->
+<div class="md:col-span-2 group mt-2">
+<label class="block text-xs font-bold text-primary uppercase tracking-widest mb-3">Short Description</label>
+<div class="relative gold-glow rounded-lg transition-all duration-300">
+<textarea class="w-full bg-input-bg border border-input-border text-white text-lg rounded-lg px-5 py-4 focus:ring-1 focus:ring-primary focus:border-primary transition-colors placeholder-gray-600 min-h-[140px] resize-none" placeholder="Describe the key features and unique selling points..."></textarea>
+</div>
+</div>
+</form>
+<!-- Spacing for bottom bar -->
+<div class="h-12"></div>
+</div>
+</div>
+<!-- Sticky Footer Action Bar -->
+<div class="absolute bottom-0 left-0 right-0 bg-form-bg/95 backdrop-blur-md border-t border-white/5 p-6 md:px-12 md:py-8 z-20">
+<div class="max-w-4xl mx-auto flex items-center justify-between">
+<button class="text-primary/70 hover:text-primary text-sm font-bold uppercase tracking-widest underline decoration-primary/30 underline-offset-4 transition-all hover:decoration-primary">
+                        Save Draft
+                    </button>
+<button class="group flex items-center gap-3 bg-primary hover:bg-yellow-400 text-black px-8 py-4 rounded-lg font-bold uppercase tracking-widest shadow-[0_0_20px_rgba(237,174,29,0.2)] hover:shadow-[0_0_30px_rgba(237,174,29,0.4)] transition-all transform active:scale-95">
+<span>Next Phase</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+</body></html>

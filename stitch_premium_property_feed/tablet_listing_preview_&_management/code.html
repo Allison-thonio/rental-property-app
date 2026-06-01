@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tablet Listing Preview &amp; Management</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#edae1d",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#181611", /* Adjusted slightly closer to provided component bg */
+                        "surface-dark": "#221c10", /* Slightly lighter for cards */
+                        "input-bg": "#27231c",
+                        "border-gold": "#544c3b",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #181611; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3a332a; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #544c3b; 
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex flex-col overflow-hidden text-[#b9b19d]">
+<!-- Header Bar -->
+<header class="h-16 shrink-0 border-b border-[#3a332a] bg-[#181611] px-6 flex items-center justify-between z-10 relative">
+<div class="flex items-center gap-4">
+<button class="text-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">apartment</span>
+<span class="text-white font-bold text-lg tracking-wide">PROPERTEEHUB</span>
+</div>
+</div>
+<h1 class="hidden md:block text-white font-bold text-xl tracking-tight">MANAGE LISTING #4092</h1>
+<div class="flex items-center gap-3">
+<button class="px-4 py-2 rounded-lg border border-primary/40 text-primary hover:bg-primary/10 transition-colors text-sm font-bold tracking-wide uppercase">
+                Save Draft
+            </button>
+<button class="px-4 py-2 rounded-lg bg-primary text-[#181611] hover:bg-opacity-90 transition-colors text-sm font-bold tracking-wide uppercase shadow-[0_0_15px_rgba(237,174,29,0.3)]">
+                Publish
+            </button>
+</div>
+</header>
+<!-- Main Content Area: Split View -->
+<main class="flex-1 flex flex-col md:flex-row overflow-hidden relative">
+<!-- Left Column: Editor & Compliance (Scrollable) -->
+<section class="flex-1 overflow-y-auto p-6 md:p-8 bg-[#181611] custom-scrollbar border-r border-[#3a332a]">
+<div class="max-w-2xl mx-auto space-y-8 pb-10">
+<!-- Property Details Section -->
+<div>
+<h2 class="text-white text-sm font-bold uppercase tracking-widest mb-5 flex items-center gap-2 border-b border-[#3a332a] pb-2">
+<span class="material-symbols-outlined text-primary text-lg">edit_note</span>
+                        Property Details
+                    </h2>
+<div class="space-y-5">
+<label class="block">
+<span class="text-white text-sm font-medium mb-2 block">Listing Title</span>
+<input class="w-full bg-input-bg border border-border-gold rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder-[#5c5649]" placeholder="e.g. Luxury Villa in Hills" type="text" value="Penthouse Suite A, 550 Vanderbilt Ave"/>
+</label>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<label class="block">
+<span class="text-white text-sm font-medium mb-2 block">Price (USD)</span>
+<div class="relative">
+<span class="absolute left-4 top-3.5 text-[#5c5649]">$</span>
+<input class="w-full bg-input-bg border border-border-gold rounded-lg pl-8 pr-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all font-semibold" type="number" value="4250000"/>
+</div>
+</label>
+<label class="block">
+<span class="text-white text-sm font-medium mb-2 block">Square Footage</span>
+<div class="relative">
+<input class="w-full bg-input-bg border border-border-gold rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" type="number" value="2400"/>
+<span class="absolute right-4 top-3.5 text-[#5c5649] text-sm">sq ft</span>
+</div>
+</label>
+</div>
+<div class="grid grid-cols-3 gap-5">
+<label class="block">
+<span class="text-white text-sm font-medium mb-2 block">Beds</span>
+<input class="w-full bg-input-bg border border-border-gold rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-all" type="number" value="3"/>
+</label>
+<label class="block">
+<span class="text-white text-sm font-medium mb-2 block">Baths</span>
+<input class="w-full bg-input-bg border border-border-gold rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-all" type="number" value="3.5"/>
+</label>
+<label class="block">
+<span class="text-white text-sm font-medium mb-2 block">Year Built</span>
+<input class="w-full bg-input-bg border border-border-gold rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-all" type="number" value="2022"/>
+</label>
+</div>
+<label class="block">
+<span class="text-white text-sm font-medium mb-2 block">Description</span>
+<textarea class="w-full bg-input-bg border border-border-gold rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all min-h-[120px] resize-y leading-relaxed" placeholder="Describe the property...">Expansive floor-to-ceiling windows offer panoramic views of the city skyline. This residence features custom Italian cabinetry, white oak floors, and a private terrace perfect for entertaining.</textarea>
+</label>
+<div>
+<span class="text-white text-sm font-medium mb-3 block">Amenities</span>
+<div class="flex flex-wrap gap-2">
+<button class="flex items-center gap-2 px-3 py-2 rounded-lg bg-primary text-[#181611] font-semibold text-sm transition-colors border border-primary">
+<span class="material-symbols-outlined text-[18px]">pool</span>
+                                    Pool
+                                </button>
+<button class="flex items-center gap-2 px-3 py-2 rounded-lg bg-primary text-[#181611] font-semibold text-sm transition-colors border border-primary">
+<span class="material-symbols-outlined text-[18px]">fitness_center</span>
+                                    Gym
+                                </button>
+<button class="flex items-center gap-2 px-3 py-2 rounded-lg bg-input-bg text-[#b9b19d] hover:text-white border border-border-gold hover:border-primary/50 text-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]">concierge</span>
+                                    Concierge
+                                </button>
+<button class="flex items-center gap-2 px-3 py-2 rounded-lg bg-input-bg text-[#b9b19d] hover:text-white border border-border-gold hover:border-primary/50 text-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]">local_parking</span>
+                                    Parking
+                                </button>
+<button class="flex items-center gap-2 px-3 py-2 rounded-lg bg-input-bg text-[#b9b19d] hover:text-white border border-border-gold hover:border-primary/50 text-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                                    Add Custom
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Verification Documents Section -->
+<div class="pt-4">
+<h2 class="text-white text-sm font-bold uppercase tracking-widest mb-5 flex items-center gap-2 border-b border-[#3a332a] pb-2">
+<span class="material-symbols-outlined text-primary text-lg">verified_user</span>
+                        Verification Documents
+                    </h2>
+<div class="bg-surface-dark border border-dashed border-primary/40 rounded-xl p-6 text-center hover:bg-primary/5 transition-colors cursor-pointer group mb-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary text-2xl">upload_file</span>
+</div>
+<p class="text-white font-medium mb-1">Drag &amp; Drop or Click to Upload</p>
+<p class="text-sm text-[#b9b19d]">Deeds, Ownership Proof, or Legal Contracts</p>
+</div>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-3 bg-input-bg rounded-lg border border-border-gold/50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-500">check_circle</span>
+<div>
+<p class="text-white text-sm font-medium">Deed of Trust.pdf</p>
+<p class="text-xs text-[#b9b19d]">Uploaded 2 mins ago</p>
+</div>
+</div>
+<span class="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded">PENDING REVIEW</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-input-bg rounded-lg border border-border-gold/50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#b9b19d]">draft</span>
+<div>
+<p class="text-white text-sm font-medium">Identity Verification</p>
+<p class="text-xs text-[#b9b19d]">Required</p>
+</div>
+</div>
+<button class="text-xs font-bold text-white bg-[#3a332a] hover:bg-[#544c3b] px-3 py-1 rounded transition-colors">UPLOAD</button>
+</div>
+</div>
+</div>
+<!-- Settings Section -->
+<div class="pt-4">
+<h2 class="text-white text-sm font-bold uppercase tracking-widest mb-5 flex items-center gap-2 border-b border-[#3a332a] pb-2">
+<span class="material-symbols-outlined text-primary text-lg">settings</span>
+                        Listing Visibility
+                    </h2>
+<div class="flex items-center justify-between mb-4">
+<div>
+<p class="text-white font-medium">Public Listing</p>
+<p class="text-sm text-[#b9b19d]">Visible to all buyers on the feed</p>
+</div>
+<button class="w-12 h-7 rounded-full bg-primary relative transition-colors">
+<span class="block w-5 h-5 bg-white rounded-full shadow absolute top-1 right-1"></span>
+</button>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<p class="text-white font-medium">Off-Market Opportunity</p>
+<p class="text-sm text-[#b9b19d]">Only visible to VIP investors</p>
+</div>
+<button class="w-12 h-7 rounded-full bg-[#3a332a] relative transition-colors">
+<span class="block w-5 h-5 bg-[#b9b19d] rounded-full shadow absolute top-1 left-1"></span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Column: Live Preview (Sticky) -->
+<aside class="hidden md:flex md:w-[45%] lg:w-[40%] bg-surface-dark flex-col border-l border-[#3a332a] relative">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')] opacity-20 pointer-events-none"></div>
+<div class="p-6 border-b border-[#3a332a] bg-[#181611]/90 backdrop-blur-sm z-10 flex justify-between items-center">
+<h3 class="text-white font-bold tracking-wide uppercase text-sm">Live Preview</h3>
+<div class="flex items-center gap-2 text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded border border-primary/20">
+<span class="material-symbols-outlined text-[14px] animate-pulse">visibility</span>
+                    Buyer's View
+                </div>
+</div>
+<div class="flex-1 overflow-y-auto p-6 flex flex-col items-center justify-center bg-gradient-to-b from-[#221c10] to-[#181611]">
+<!-- The Preview Card -->
+<div class="w-full max-w-sm bg-[#181611] rounded-2xl overflow-hidden shadow-2xl border border-[#3a332a] relative group">
+<!-- Image Carousel Area -->
+<div class="relative h-64 w-full">
+<img alt="Luxury penthouse interior living room with large windows" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHGSRXtefedjc0YMDoAG0OVVC20g_sfAaGlnx-TNflZIgXPrx_ubTnzbsWC0IiZFKijanYxtHvis6voWEkh0XGVopS22acTaP0j-JCUKHBgLUy9zyX5K2moSNGIWi7AAvLu1Zd6SCvtPoSitcHNGaIa2jgiUoQghqJ-RQCgioz1SV_q_B99qE-xLXZnUEvooCCzuY73bXduRHT8zZHUvFVGO2D5LCiqGkJQFNrIfwRX0VNZ2VGyjHUGHwDJm-_KUKXndE3cuee61I"/>
+<div class="absolute top-4 left-4 bg-[#181611]/80 backdrop-blur-md px-3 py-1 rounded-md border border-[#3a332a]">
+<span class="text-primary text-xs font-bold tracking-wider uppercase">New Listing</span>
+</div>
+<div class="absolute top-4 right-4">
+<button class="w-8 h-8 rounded-full bg-[#181611]/60 hover:bg-[#181611] backdrop-blur text-white flex items-center justify-center transition-all">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-4 left-0 right-0 flex justify-center gap-1.5">
+<div class="w-2 h-2 rounded-full bg-white"></div>
+<div class="w-2 h-2 rounded-full bg-white/50"></div>
+<div class="w-2 h-2 rounded-full bg-white/50"></div>
+</div>
+<!-- Price Tag Overlay -->
+<div class="absolute bottom-4 left-4">
+<h3 class="text-white text-2xl font-extrabold drop-shadow-md">$4,250,000</h3>
+</div>
+</div>
+<!-- Card Body -->
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h4 class="text-white font-bold text-lg leading-tight mb-1">Penthouse Suite A</h4>
+<p class="text-[#b9b19d] text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                                    550 Vanderbilt Ave, NY
+                                </p>
+</div>
+<!-- Agent Badge -->
+<div class="flex flex-col items-end">
+<img alt="Real estate agent portrait" class="w-10 h-10 rounded-full border-2 border-primary object-cover mb-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6ahesNeOG3Zcv_9TnVQdOOvC9jgTGbcQQw1tGJkCHi7dkFseCnJE5AjOp6Nli4GS8gPehJC2LKgvtnOmDnT4cMbKc-ujUuU9p9N9XetyRxlJ8KnguX7-4A2ifP9y_GruLik3Ch7gN5oJSDK-LGFUR7qYhjZE81BbGFEPTz_6s_ghgCAG20n8SRGxlc5cxcKvSDnJNkqJ_q5n1Gthje1TvPJvynDCG1wiXvt9HNvQZVN6epsIsGXwVoqdrRD91JOPNAYd9W2aThFo"/>
+</div>
+</div>
+<div class="h-px bg-[#3a332a] my-4"></div>
+<div class="flex justify-between items-center text-sm text-white">
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-[#b9b19d]">bed</span>
+<span class="font-bold">3 <span class="text-[#b9b19d] font-normal text-xs">Beds</span></span>
+</div>
+<div class="w-px h-8 bg-[#3a332a]"></div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-[#b9b19d]">bathtub</span>
+<span class="font-bold">3.5 <span class="text-[#b9b19d] font-normal text-xs">Baths</span></span>
+</div>
+<div class="w-px h-8 bg-[#3a332a]"></div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-[#b9b19d]">square_foot</span>
+<span class="font-bold">2,400 <span class="text-[#b9b19d] font-normal text-xs">Sq Ft</span></span>
+</div>
+</div>
+<div class="mt-5 flex gap-2">
+<span class="px-2 py-1 rounded bg-[#27231c] border border-[#3a332a] text-[10px] uppercase font-bold text-[#b9b19d]">Pool</span>
+<span class="px-2 py-1 rounded bg-[#27231c] border border-[#3a332a] text-[10px] uppercase font-bold text-[#b9b19d]">Gym</span>
+<span class="px-2 py-1 rounded bg-[#27231c] border border-[#3a332a] text-[10px] uppercase font-bold text-[#b9b19d]">+2 more</span>
+</div>
+</div>
+</div>
+<div class="mt-8 text-center px-8">
+<p class="text-xs text-[#5c5649] uppercase tracking-widest mb-2">Device Preview</p>
+<div class="flex gap-4 justify-center text-[#b9b19d]">
+<button class="hover:text-primary transition-colors flex flex-col items-center gap-1">
+<span class="material-symbols-outlined">phone_iphone</span>
+<span class="text-[10px]">Mobile</span>
+</button>
+<button class="text-primary flex flex-col items-center gap-1">
+<span class="material-symbols-outlined">tablet_mac</span>
+<span class="text-[10px]">Tablet</span>
+</button>
+<button class="hover:text-primary transition-colors flex flex-col items-center gap-1">
+<span class="material-symbols-outlined">desktop_mac</span>
+<span class="text-[10px]">Desktop</span>
+</button>
+</div>
+</div>
+</div>
+</aside>
+</main>
+</body></html>
